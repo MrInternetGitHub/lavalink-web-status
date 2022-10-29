@@ -10,6 +10,20 @@ Add A Discord Bot Token On [Line 51](https://github.com/MrInternetGitHub/lavalin
 
 ```node index.js``` - Start the bot.
 
+## ➕ Add lavalink
+
+To add lavalinks go to [config.js](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/config.js)
+
+```
+     {
+      host: "HOST",  <--- add ip/host name of lavalink
+      password: "PASSWORD",  <--- password of lavalink
+      port: PORT,  <--- port of lavalink
+      retryDelay: 1,
+      identifier: "NAME FOR THE LAVALINK",  <--- whatever name you like
+      secure: false/true,  <--- lavalink is secure or not (flase = not secure, true = secure)
+    },
+```
 ## 🏃🏻 Run the projects
 
 [![Remix on Glitch](https://i.imgur.com/AKQZtRC.png)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)
