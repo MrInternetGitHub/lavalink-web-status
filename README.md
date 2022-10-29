@@ -12,8 +12,9 @@
 [![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github/SudhanPlayz/Discord-MusicBot)
 
 ## ✨ Contributors
-<a href="https://github.com/DarrenOfficial/lavalink-list/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=DarrenOfficial/lavalink-list" />
+<a href="https://github.com/MrInternetGitHub/lavalink-web-status/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=MrInternetGitHub/lavalink-web-status" />
 </a>
-### If you find this useful give it a star ⭐️
+
+## If you find this useful give it a star ⭐️
 
