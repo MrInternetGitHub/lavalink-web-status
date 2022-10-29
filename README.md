@@ -9,7 +9,7 @@
 
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrInternetGitHub/lavalink-web-status)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github/SudhanPlayz/Discord-MusicBot)
+[![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github//MrInternetGitHub/lavalink-web-status)
 
 ## ✨ Contributors
 <a href="https://github.com/MrInternetGitHub/lavalink-web-status/graphs/contributors">
