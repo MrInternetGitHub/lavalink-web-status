@@ -12,7 +12,7 @@ Add A Discord Bot Token On [Line 51](https://github.com/MrInternetGitHub/lavalin
 
 ## 🏃🏻 Run the projects
 
-[![Remix on Glitch](https://i.imgur.com/Ba2HSwk.png)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)
+[![Remix on Glitch](https://i.imgur.com/AKQZtRC.png)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrInternetGitHub/lavalink-web-status)
 [![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github//MrInternetGitHub/lavalink-web-status)
 
