@@ -4,12 +4,12 @@
 
 ## Installation
 
-Change port on [![Line 16](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/index.js#L15)
-.
-Add A Discord Bot Token On [![Line 51](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/index.js#L51)
-.
+Change port on [Line 16](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/index.js#L15)
+
+Add A Discord Bot Token On [Line 51](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/index.js#L51)
+
 ```npm i ``` - Install  all needed packages.
-.
+
 ```node index.js``` - Start the bot.
 
 
