@@ -1,8 +1,6 @@
 <h1 align="center"><img src="https://i.imgur.com/06utLxU.gif" width="30px"> Lavalink Web Status <img src="https://i.imgur.com/06utLxU.gif" width="30px"></h1>
 
-## ✨Latest Updates
-
-## Installation
+## 📎Installation
 
 Change port on [Line 16](https://github.com/MrInternetGitHub/lavalink-web-status/blob/main/index.js#L15)
 
@@ -18,6 +16,8 @@ Add A Discord Bot Token On [Line 51](https://github.com/MrInternetGitHub/lavalin
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrInternetGitHub/lavalink-web-status)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github//MrInternetGitHub/lavalink-web-status)
+
+## 📸 Screenshot
 
 ## ✨ Contributors
 <a href="https://github.com/MrInternetGitHub/lavalink-web-status/graphs/contributors">
