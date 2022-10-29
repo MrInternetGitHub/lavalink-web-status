@@ -18,6 +18,7 @@ Add A Discord Bot Token On [Line 51](https://github.com/MrInternetGitHub/lavalin
 [![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github//MrInternetGitHub/lavalink-web-status)
 
 ## 📸 Screenshot
+[![https://i.imgur.com/hMoN8ut.png]
 
 ## ✨ Contributors
 <a href="https://github.com/MrInternetGitHub/lavalink-web-status/graphs/contributors">
