@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"97b586ae9817e593954417d43ad3250a","lockfileHash":"3b866f5e7e9e7dc0f51e520373cee398","guessedImports":["discord.js","erela.js","express","socket.io","body-parser","moment","moment-duration-format","pretty-bytes"],"guessedImportsHash":"8dc6e2b135fae265a8c80b2f01481005"}}}
