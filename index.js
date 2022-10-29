@@ -48,7 +48,7 @@ client.manager = new Manager({
     if (guild) guild.shard.send(payload);
   }
 })
-client.login("Token")
+client.login("MTAxNDI0NDMyODYzOTU4MjI3OA.G2fwnz._x6HyoQU1WVHoVqPYqy--VkMmsBTdUgYNt3MhA")
 
 client.on("ready",(client)=>{
   console.log(client.user.tag+" ready")
