@@ -34,10 +34,10 @@ To add lavalinks go to [config.js](https://github.com/MrInternetGitHub/lavalink-
 ## 📸 Screenshot
 [![Example Image](https://i.imgur.com/hMoN8ut.png)](https://i.imgur.com/hMoN8ut.png)
 
-## ✨ Contributors
+## 😀 Contributors
 <a href="https://github.com/MrInternetGitHub/lavalink-web-status/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=MrInternetGitHub/lavalink-web-status" />
 </a>
 
-## If you find this useful give it a star ⭐️
+## If you find this helpfull give it a star ⭐️
 
