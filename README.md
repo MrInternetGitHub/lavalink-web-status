@@ -29,7 +29,7 @@ To add lavalinks go to [config.js](https://github.com/MrInternetGitHub/lavalink-
 [![Remix on Glitch](https://i.imgur.com/AKQZtRC.png)](https://glitch.com/edit/#!/import/github/MrInternetGitHub/lavalink-web-status)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrInternetGitHub/lavalink-web-status)
 [![Run on Repl.it](https://repl.it/badge/github/MrInternetGitHub/lavalink-web-status)](https://repl.it/github//MrInternetGitHub/lavalink-web-status)
-
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/gvlob9?referralCode=InternetRailway)
 
 ## 📸 Screenshot
 [![Example Image](https://i.imgur.com/hMoN8ut.png)](https://i.imgur.com/hMoN8ut.png)
