@@ -82,34 +82,115 @@ client.manager.on("nodeError", (node, error) => {
 })
 client.on("raw", d => client.manager.updateVoiceState(d));
 
-function getStat(client){
-  let all = []
-client.manager.nodes.forEach(node=>{
-  
-    
-  all.push(`
-  <div ${node.connected? `class = "alive"`:`class = "dead"`} id =  "Info" >
-<p>
-  ${node.connected? "🟢•Online":"🔴•Offline"} | ${node.options.identifier}<br>
-  ${node.options.owner? `[ Hosted by : ${node.options.owner} ]`:" "}<br>
-  PLAYERS : [${node.stats.playingPlayers}/${node.stats.players}]<br>
-<br><br>
-  Cores : ${node.stats.cpu.cores} Core(s)<br>
-  Memory Usage : ${prettyBytes(node.stats.memory.used)}/${prettyBytes(node.stats.memory.reservable)}<br>
-  UPTIME : ${moment.duration(node.stats.uptime).format(" d[d], h[h], m[m]")}<br><br>
- • LOAD •<br>
-  CPU : ${(Math.round(node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}% | Lavalink : ${(Math.round(node.stats.cpu.lavalinkLoad * 100) / 100).toFixed(2)}% 
-  <br><br>
-  Config:<br> 
-  HOST: ${node.options.host}<br>
-  PORT: ${node.options.port}<br>
-  PASSWORD: ${node.options.password}<br>
-  SECURE: ${node.options.secure? "true":"false"}<br>
- 
-                                
-                                </p>
- </div> <br>                    `)
-})
-  
-  return all;
+const cardsContainer = document.getElementsByClassName('cards');
+
+function setDialHandPosition(percentage) {
+    let dialVal = document.getElementById("dial-value");
+    const degrees = (percentage / 100) * 180;
+    dialVal.innerHTML = percentage + "%";
+    hand.style.transform = `translate(0, -50%) rotate(${degrees - 90}deg)`;
+    return degrees;
 }
+
+function setDialHandInvertedPosition(percentage) {
+    let dialValInv = document.getElementById("dial-value-inverted");
+    const degrees = (percentage / 100) * 180;
+    dialValInv.innerHTML = percentage + "%";
+    handInv.style.transform = `translate(0, -50%) rotate(${180 - degrees + 90}deg)`;
+    return degrees;
+}
+
+function getStat(client) {
+    let all = []
+    client.manager.nodes.forEach(node => {
+        all.push(`
+      <div class="card">
+        <div style="display: inline-block; margin: 20px auto;">
+          <div class="center">
+            <h1 class="title">${node.options.owner}</h1>
+          </div>
+          <div class="center">
+            <h1 id="connection-status" class="${node.connected ? 'connected' : 'disconnected'}">${node.connected ? 'CONNECTED' : 'DISCONNECTED'}</h1>
+          </div>
+          <div class="center">
+            <h1>CPU USAGE</h1>
+            <h2 id="dial-value">${setDialHandPosition(Math.round(node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}%</h2>
+          </div>
+          <div class="dial">
+            <div id="hand" class="hand"></div>
+          </div>
+          <div class="dial-inverted">
+            <div id="hand-inv" class="hand-inverted"></div>
+          </div>
+          <div class="center">
+            <h2 id="dial-value-inverted">${setDialHandInvertedPosition((node.stats.memory.used / node.stats.memory.reservable) * 100).toFixed(2)}%</h2>
+            <h1>MEMORY USAGE</h1>
+          </div>
+          <div class="center">
+            <div class="bg-ct">
+              <h3>
+                Uptime
+                <br>
+                <span class="detail">${moment.duration(node.stats.uptime).format(" d[d], h[h], m[m]")}</span>
+              </h3>
+              <h3>
+                Host
+                <br>
+                <span class="detail">${node.options.host}</span>
+              </h3>
+              <h3>
+                Port
+                <br>
+                <span class="detail">${node.options.port}</span>
+              </h3>
+              <h3>
+                Password
+                <br>
+                <span class="password">${node.options.password}</span>
+              </h3>
+              <h3>
+                Secure
+                <br>
+                <span class="password">${node.options.secure ? "TRUE" : "FALSE"}</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    `);
+    })
+
+return all;
+}
+
+
+//function getStat(client){
+//  let all = []
+//  client.manager.nodes.forEach(node=>{
+
+//    all.push(`
+//    <div ${node.connected? `class = "alive"`:`class = "dead"`} id =  "Info" >
+//<p>
+//      ${node.connected? "🟢•Online":"🔴•Offline"} | ${node.options.identifier}<br>
+//      ${node.options.owner? `[ Hosted by : ${node.options.owner} ]`:" "}<br>
+//      PLAYERS : [${node.stats.playingPlayers}/${node.stats.players}]<br>
+//<br><br>
+//      Cores : ${node.stats.cpu.cores} Core(s)<br>
+//      Memory Usage : ${prettyBytes(node.stats.memory.used)}/${prettyBytes(node.stats.memory.reservable)}<br>
+//      UPTIME : ${moment.duration(node.stats.uptime).format(" d[d], h[h], m[m]")}<br><br>
+//     • LOAD •<br>
+//      CPU : ${(Math.round(node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}% | Lavalink : ${(Math.round(node.stats.cpu.lavalinkLoad * 100) / 100).toFixed(2)}%
+//      <br><br>
+//      Config:<br>
+//      HOST: ${node.options.host}<br>
+//      PORT: ${node.options.port}<br>
+//      PASSWORD: ${node.options.password}<br>
+//      SECURE: ${node.options.secure? "true":"false"}<br>
+
+//                                    </p>
+//</div> <br>                    `)
+//  })
+
+//  return all;
+//}
