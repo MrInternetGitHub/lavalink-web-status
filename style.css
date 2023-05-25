@@ -1,144 +1,137 @@
-import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-     scroll-behavior: smooth;
-      align-items: center;
-  color:#ffffff;
-   
- /* color:#ffffff;*/
-  
-}
-section
-{
-      align-items: center;
-  color:#ffffff;
-  font-family: 'Poppins', sans-serif;
-  justify-content: center;
-}
-.rainbow
-{
-    
-   /* Font options */
-  box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; 
-   font-size: 1.5em;
-    color: #77ff5c;
-    font-weight: 500;
-  align-items: center;
-  justify-content: center;
-  animation: rainbow 1s infinite;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
-  
-  
-   /* Chrome, Safari, Opera */
-  -webkit-animation: rainbow 5s infinite; 
-  
-  /* Internet Explorer */
-  -ms-animation: rainbow 5s infinite;
-  
-  /* Standar Syntax */
-  animation: rainbow 5s infinite; 
-}
- 
-@keyframes rainbow{
-    0%{color: orange;}	
-  10%{color: yellow;}	
-	20%{color: red;}
- 30%{color: CadetBlue;}
-	40%{color: yellow;}
-  50%{color: coral;}
-	60%{color: magenta;}
-  70%{color: cyan;}
-  80%{color: pink;}
-  90%{color: magenta;}
-	100%{color: orange;}
-  }
-/* Crome, Safari, Opera */
-
 body {
-background-color:#1a2035;
-/*    position: relative;*/
-   /* min-height: 100vh;*/
-  /*  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("./assets/bg.gif");
-    background-size: cover;
- */   background-position: center;
-   justify-content: space-between;
-    align-items: center;
-  color:#ffffff;
-  font-family: 'Poppins', sans-serif;
+    background-color: rgb(20, 20, 40);
 }
-.box
-{
-      align-items: center;
-  color:#00ff00;
-  font-family: 'Poppins', sans-serif;
-}
-.h3
-{
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; 
-   font-size: 1.5em;
-    color: #77ff5c;
-    font-weight: 500;
-  align-items: center;
-  justify-content: center;
-  animation: rainbow 1s infinite;
-  text-align: center;
-    
-}
-.p
-{
-        display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    color:#ffffffff;
-    overflow-wrap:break-word;
 
+.dial {
+    margin: 2px auto;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(70, 70, 90);
+    border-radius: 400px 400px 0 0;
+    position: relative;
+    overflow: hidden;
 }
-.dead
-{
- /* border: 5px solid #00ff00;*/
-border: 5px solid #ff0000;
-   display: flex;
-    justify-content: center;
-   flex-wrap: wrap;
-   flex-direction: row;
-    color:#ffffffff; 
-  /*  border: #00ff00;*/
- max-width: 100%;
- /* height:50%;*/
-    margin: auto;
-    text-align: center;
-    border-style:solid;    
-    border-radius: 25px;
-    font-family: 'Poppins', sans-serif;
+
+.dial-inverted {
+    margin: 2px auto;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(70, 70, 90);
+    border-radius: 0 0 400px 400px;
+    position: relative;
+    overflow: hidden;
 }
-.alive
-{
-  border: 5px solid #00ff00;
-   display: flex;
-    justify-content: center;
-   flex-wrap: wrap;
-   flex-direction: row;
-    color:#ffffffff; 
-  /*  border: #00ff00;*/
-     max-width: 100%;
-  width: 100%;
- /* height:50%;*/
-    margin:0 auto;
+
+.hand {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 80px solid rgb(150, 150, 170);
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg);
+    transition: transform 0.3s;
+}
+
+.hand-inverted {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 80px solid rgb(150, 150, 170);
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    top: -25%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(50%, 0) rotate(0deg);
+    transition: transform 0.3s;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    color: rgb(70, 70, 90);
+    background-color: rgb(40, 40, 60);
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#dial-value,
+#dial-value-inverted {
+    color: white;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
     text-align: center;
-    align-items:center;
-    border-style:solid; 
-      box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; 
- border-radius: 25px;
-}   
+}
+
+h1,
+h4 {
+    color: rgb(150, 150, 180);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: rgb(210, 210, 230);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-ct {
+    background-color: rgb(50, 50, 70);
+    padding: 15px;
+    width: auto;
+    display: inline-block;
+}
+
+.connected {
+    color: rgb(100, 255, 100);
+}
+
+.disconnected {
+    color: rgb(255, 100, 100);
+}
+
+.updatedAt {
+    color: rgb(165, 195, 255);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 20%;
+    text-align: center;
+    border: 2px solid rgb(110, 110, 160);
+}
+
+.viewvv {
+    font-size: 18px;
+}
+
+.password {
+    color: rgb(190, 170, 255);
+}
+
+.detail {
+    color: rgb(140, 140, 160);
+}
+
+.title {
+    color: white;
+    font-size: 38px;
+}
