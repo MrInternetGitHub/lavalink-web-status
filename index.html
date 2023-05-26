@@ -2,9 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="./style.css">
-    <title>Status Page</title>
+    <title>Status</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.darrennathanael.com/assets/lavalinklist/favicon.ico">
-    <meta content="A Lavalink Status webpage for Darren's Lavalink List @ https://lavalink.darrennathanael.com" property="og:description" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -12,11 +11,13 @@
         <h1 class='updatedAt' id='updated-at'></h1>
         <h4 class='updatedAt viewvv' id='peopleViewing'></h4>
     </div>
-    <div class="cards">
+    <br />
+    <div id="Info" class="cards">
         <script src="./scripts/script.js" defer></script>
     </div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
+<script src="./scripts/updater.js"></script>
 <script>
 
     var socket = io();
@@ -27,6 +28,5 @@
         body.innerHTML = `${data.data}<br>
  ${data.message} `;
     })
-
 
 </script>

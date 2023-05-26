@@ -1,6 +1,10 @@
 console.log("fart")
 
 const express =  require("express")
+
+import { setDialHandPosition, setDialHandInvertedPosition } from './scripts/updater.js';
+//const updtrscrpt = require("./scripts/updater.js");
+
 const app = express();
 var http =require("http")
 const server = http.createServer(app)
@@ -14,7 +18,7 @@ const prettyBytes = require("pretty-bytes");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(__dirname))
-server.listen(PORT,()=>{
+server.listen(2334,()=>{
 console.log("Server Is Running")
 })
 let watching = 0;
@@ -50,7 +54,7 @@ client.manager = new Manager({
     if (guild) guild.shard.send(payload);
   }
 })
-client.login("TOKEN")
+client.login("MTA3MDczNTY3OTg4MzA2MzQzNw.G0vPda.t5lx-KUcqcyLwdQiYX59WITNtxdlWoBLq4_ZxQ")
 
 client.on("ready",(client)=>{
   console.log(client.user.tag+" ready")
@@ -82,23 +86,7 @@ client.manager.on("nodeError", (node, error) => {
 })
 client.on("raw", d => client.manager.updateVoiceState(d));
 
-const cardsContainer = document.getElementsByClassName('cards');
-
-function setDialHandPosition(percentage) {
-    let dialVal = document.getElementById("dial-value");
-    const degrees = (percentage / 100) * 180;
-    dialVal.innerHTML = percentage + "%";
-    hand.style.transform = `translate(0, -50%) rotate(${degrees - 90}deg)`;
-    return degrees;
-}
-
-function setDialHandInvertedPosition(percentage) {
-    let dialValInv = document.getElementById("dial-value-inverted");
-    const degrees = (percentage / 100) * 180;
-    dialValInv.innerHTML = percentage + "%";
-    handInv.style.transform = `translate(0, -50%) rotate(${180 - degrees + 90}deg)`;
-    return degrees;
-}
+//const cardsContainer = document.getElementsByClassName('cards');
 
 function getStat(client) {
     let all = []
@@ -114,7 +102,7 @@ function getStat(client) {
           </div>
           <div class="center">
             <h1>CPU USAGE</h1>
-            <h2 id="dial-value">${setDialHandPosition(Math.round(node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}%</h2>
+            <h2 id="dial-value">${Math.round((node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}%</h2>
           </div>
           <div class="dial">
             <div id="hand" class="hand"></div>
@@ -123,7 +111,7 @@ function getStat(client) {
             <div id="hand-inv" class="hand-inverted"></div>
           </div>
           <div class="center">
-            <h2 id="dial-value-inverted">${setDialHandInvertedPosition((node.stats.memory.used / node.stats.memory.reservable) * 100).toFixed(2)}%</h2>
+            <h2 id="dial-value-inverted">${((node.stats.memory.used / node.stats.memory.reservable) * 100).toFixed(2)}%</h2>
             <h1>MEMORY USAGE</h1>
           </div>
           <div class="center">
@@ -159,38 +147,10 @@ function getStat(client) {
       </div>
       <br>
     `);
+
+    setDialHandPosition(Math.round((node.stats.cpu.systemLoad * 100) / 100).toFixed(2))
+    setDialHandInvertedPosition(((node.stats.memory.used / node.stats.memory.reservable) * 100).toFixed(2));
     })
 
 return all;
 }
-
-
-//function getStat(client){
-//  let all = []
-//  client.manager.nodes.forEach(node=>{
-
-//    all.push(`
-//    <div ${node.connected? `class = "alive"`:`class = "dead"`} id =  "Info" >
-//<p>
-//      ${node.connected? "🟢•Online":"🔴•Offline"} | ${node.options.identifier}<br>
-//      ${node.options.owner? `[ Hosted by : ${node.options.owner} ]`:" "}<br>
-//      PLAYERS : [${node.stats.playingPlayers}/${node.stats.players}]<br>
-//<br><br>
-//      Cores : ${node.stats.cpu.cores} Core(s)<br>
-//      Memory Usage : ${prettyBytes(node.stats.memory.used)}/${prettyBytes(node.stats.memory.reservable)}<br>
-//      UPTIME : ${moment.duration(node.stats.uptime).format(" d[d], h[h], m[m]")}<br><br>
-//     • LOAD •<br>
-//      CPU : ${(Math.round(node.stats.cpu.systemLoad * 100) / 100).toFixed(2)}% | Lavalink : ${(Math.round(node.stats.cpu.lavalinkLoad * 100) / 100).toFixed(2)}%
-//      <br><br>
-//      Config:<br>
-//      HOST: ${node.options.host}<br>
-//      PORT: ${node.options.port}<br>
-//      PASSWORD: ${node.options.password}<br>
-//      SECURE: ${node.options.secure? "true":"false"}<br>
-
-//                                    </p>
-//</div> <br>                    `)
-//  })
-
-//  return all;
-//}

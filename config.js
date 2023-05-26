@@ -1,20 +1,12 @@
 module.exports = {
   nodes: [
      {
-      host: "HOST",
-      password: "PASSWORD",
-      port: PORT,
+      host: "hatkidllus.gremagol.xyz",
+      password: "easypass",
+      port: 2334,
       retryDelay: 1,
-      identifier: "NAME FOR THE LAVALINK",
-      secure: false/true,
-    },
-    {
-      host: "HOST",
-      password: "PASSWORD",
-      port: PORT,
-      retryDelay: 1,
-      identifier: "NAME FOR THE LAVALINK",
-      secure: false/true,
-    },
+      identifier: "Hatty's Lavalink US (Public)",
+      secure: false,
+    }
   ],
 };
